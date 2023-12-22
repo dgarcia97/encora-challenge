@@ -1,0 +1,20 @@
+.posts {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+  height: calc(100vh - 18em);
+  overflow: auto;
+}
+
+.posts__card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.loading {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}

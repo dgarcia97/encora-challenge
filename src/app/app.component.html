@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+  <span>Encora Challenge</span>
+
+  <span class="spacer"></span>
+
+  <button mat-icon-button
+          aria-label="Logout"
+          matTooltip="Logout"
+          (click)="doLogout()">
+    <mat-icon>logout</mat-icon>
+  </button>
+</mat-toolbar>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

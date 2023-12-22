@@ -1,0 +1,23 @@
+<h1>Posts</h1>
+
+<div class="posts">
+  @if (data$ | async; as posts) {
+    @if (posts.length > 0) {
+      @for (post of posts; track post) {
+        <mat-card class="mat-elevation-z5">
+          <mat-card-content class="posts__card-content">
+            <span><b>{{ post.title | uppercase }}</b></span>
+            <span>{{ post.body }}</span>
+            <span><i>Author: {{ post.user?.name }}</i></span>
+          </mat-card-content>
+        </mat-card>
+      }
+    } @else {
+      <span><b>Zero Record found!</b></span>
+    }
+  } @else {
+    <div class="loading">
+      <mat-spinner color="primary"></mat-spinner>
+    </div>
+  }
+</div>
